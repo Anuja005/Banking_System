@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
-    <persistence-unit name="IMESH" transaction-type="JTA">
+    <persistence-unit name="BANKING" transaction-type="JTA">
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bcd_bank?useSSL=false"/>
             <property name="jakarta.persistence.jdbc.user" value="root"/>
-            <property name="jakarta.persistence.jdbc.password" value="Imeshnadun@231"/>
+            <property name="jakarta.persistence.jdbc.password" value="anuja"/>
         </properties>
     </persistence-unit>
 </persistence>

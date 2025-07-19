@@ -1,0 +1,19 @@
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee" version="5.0">
+    <servlet>
+        <servlet-name>AuthServlet</servlet-name>
+        <servlet-class>com.example.web.AuthServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AuthServlet</servlet-name>
+        <url-pattern>/AuthServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TransferServlet</servlet-name>
+        <servlet-class>com.example.web.TransferServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TransferServlet</servlet-name>
+        <url-pattern>/TransferServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
