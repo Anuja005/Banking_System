@@ -1,0 +1,79 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f7f9fc;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #1e293b;
+    margin-bottom: 30px;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.card {
+    flex: 1 1 200px;
+    background: #fff;
+    border-radius: 16px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #fff;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Card Colors */
+.blue { background: linear-gradient(135deg, #3b82f6, #9333ea); }
+.green { background: linear-gradient(135deg, #10b981, #06b6d4); }
+.orange { background: linear-gradient(135deg, #f59e0b, #f97316); }
+.pink { background: linear-gradient(135deg, #ec4899, #f43f5e); }
+
+.actions {
+    margin-top: 20px;
+}
+
+.btn {
+    background: #1e3a8a;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #2563eb;
+}
+
+.messages p {
+    margin: 10px 0;
+    font-size: 16px;
+}
