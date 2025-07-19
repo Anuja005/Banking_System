@@ -24,6 +24,18 @@ public class BankService {
         }
     }
 
+    // 🔐 Validate admin login
+    public Admin adminLogin(String username, String password) {
+        try {
+            return em.createQuery("SELECT a FROM Admin a WHERE a.username = :u AND a.password = :p", Admin.class)
+                    .setParameter("u", username)
+                    .setParameter("p", password)
+                    .getSingleResult();
+        } catch (NoResultException e) {
+            return null;
+        }
+    }
+
     // 💰 Deposit
     public void deposit(Account account, double amount) {
         account.setBalance(account.getBalance() + amount);

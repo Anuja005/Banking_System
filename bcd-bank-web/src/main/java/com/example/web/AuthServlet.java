@@ -1,5 +1,6 @@
 package com.example.web;
 
+import com.example.rmi.model.Admin;
 import com.example.rmi.model.Customer;
 import com.example.rmi.service.BankService;
 import jakarta.ejb.EJB;
@@ -20,15 +21,28 @@ public class AuthServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
+        String role = req.getParameter("role");
 
-        Customer customer = bankService.login(username, password);
-        if (customer != null) {
-            HttpSession session = req.getSession();
-            session.setAttribute("customer", customer);
-            resp.sendRedirect("dashboard.jsp");
+        if ("admin".equals(role)) {
+            Admin admin = bankService.adminLogin(username, password);
+            if (admin != null) {
+                HttpSession session = req.getSession();
+                session.setAttribute("admin", admin);
+                resp.sendRedirect("admin_dashboard.jsp");
+            } else {
+                req.setAttribute("error", "Invalid username or password.");
+                req.getRequestDispatcher("login.jsp").forward(req, resp);
+            }
         } else {
-            req.setAttribute("error", "Invalid username or password.");
-            req.getRequestDispatcher("login.jsp").forward(req, resp);
+            Customer customer = bankService.login(username, password);
+            if (customer != null) {
+                HttpSession session = req.getSession();
+                session.setAttribute("customer", customer);
+                resp.sendRedirect("dashboard.jsp");
+            } else {
+                req.setAttribute("error", "Invalid username or password.");
+                req.getRequestDispatcher("login.jsp").forward(req, resp);
+            }
         }
     }
 }

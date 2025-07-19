@@ -17,6 +17,13 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
             </div>
+            <div class="input-group">
+                <label for="role">User Role</label>
+                <select id="role" name="role">
+                    <option value="customer">Customer</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
             <button type="submit">Login</button>
             <p class="error-message" style="color:red">${error}</p>
         </form>
