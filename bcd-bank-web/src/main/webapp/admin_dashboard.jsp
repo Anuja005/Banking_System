@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin_dashboard.css">
 </head>
 <body>
 <!-- Sidebar Navigation -->
@@ -46,7 +46,7 @@
             </div>
         </div>
         <div class="user-actions">
-            <a href="login.jsp" class="btn logout-btn"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            <a href="login.jsp" class="logout-btn"><i class="fas fa-sign-out-alt"></i>Logout</a>
         </div>
     </header>
 
@@ -58,10 +58,10 @@
         <div class="card customer-portal">
             <div class="card-header">
                 <div class="card-icon"><i class="fas fa-users"></i></div>
-                <div><p class="card-title">CUSTOMER MANAGEMENT</p></div>
+                <p class="card-title">CUSTOMER MANAGEMENT</p>
             </div>
             <div class="card-body">
-                <a href="add_customer.jsp" class="btn btn-primary">Add Customer</a>
+                <a href="add_customer.jsp" class="btn btn-primary" style="margin-bottom: 15px">Add Customer</a>
                 <table class="table">
                     <thead>
                     <tr>
@@ -79,8 +79,8 @@
                         <td><%= customer.getFullName() %></td>
                         <td><%= customer.getEmail() %></td>
                         <td>
-                            <a href="update_customer.jsp?id=<%= customer.getId() %>" class="btn btn-sm btn-primary">Update</a>
-                            <a href="DeleteCustomerServlet?id=<%= customer.getId() %>" class="btn btn-sm btn-danger">Delete</a>
+                            <a href="update_customer.jsp?id=<%= customer.getId() %>" class="btn-sm btn-primary">Update</a>
+                            <a href="DeleteCustomerServlet?id=<%= customer.getId() %>" class="btn-sm btn-danger">Delete</a>
                         </td>
                     </tr>
                     <% } %>
@@ -94,7 +94,7 @@
         <div class="card">
             <div class="card-header">
                 <div class="card-icon"><i class="fas fa-exchange-alt"></i></div>
-                <div><p class="card-title">TRANSACTIONS</p></div>
+                <p class="card-title">TRANSACTIONS</p>
             </div>
             <div class="card-body">
                 <p>Transaction details will be displayed here.</p>
@@ -105,7 +105,7 @@
         <div class="card">
             <div class="card-header">
                 <div class="card-icon"><i class="fas fa-bell"></i></div>
-                <div><p class="card-title">NOTIFICATIONS</p></div>
+                <p class="card-title">NOTIFICATIONS</p>
             </div>
             <div class="card-body">
                 <p>Notification details will be displayed here.</p>
