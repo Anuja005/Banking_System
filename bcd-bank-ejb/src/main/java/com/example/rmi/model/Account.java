@@ -17,10 +17,7 @@ public class Account {
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
-    @Column(name = "account_type")
-    private String accountType;
-
-    private java.math.BigDecimal balance;
+    private double balance;
 
     private String status;
 
@@ -46,19 +43,11 @@ public class Account {
         this.customer = customer;
     }
 
-    public String getAccountType() {
-        return accountType;
-    }
-
-    public void setAccountType(String accountType) {
-        this.accountType = accountType;
-    }
-
-    public java.math.BigDecimal getBalance() {
+    public double getBalance() {
         return balance;
     }
 
-    public void setBalance(java.math.BigDecimal balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
 
