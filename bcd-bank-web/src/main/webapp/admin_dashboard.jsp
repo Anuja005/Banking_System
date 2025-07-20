@@ -12,7 +12,7 @@
     }
 
     AdminService adminService = (AdminService) new InitialContext().lookup("java:global/bcd-bank-ear/bcd-bank-ejb/AdminService");
-    List<Customer> customers = adminService.getLatestCustomers(5);
+    List<Customer> customers = adminService.getAllCustomers();
 %>
 <!DOCTYPE html>
 <html lang="en">
