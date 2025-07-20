@@ -1,8 +1,6 @@
 <%@ page import="com.example.rmi.model.Admin" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.example.rmi.model.Customer" %>
-<%@ page import="com.example.rmi.service.AdminService" %>
-<%@ page import="jakarta.naming.InitialContext" %>
 <%@ page session="true" %>
 <%
     Admin admin = (Admin) session.getAttribute("admin");
@@ -10,9 +8,7 @@
         response.sendRedirect("login.jsp");
         return;
     }
-
-    AdminService adminService = (AdminService) new InitialContext().lookup("java:global/bcd-bank-ear/bcd-bank-ejb/AdminService");
-    List<Customer> customers = adminService.getAllCustomers();
+    List<Customer> customers = (List<Customer>) request.getAttribute("customers");
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +27,7 @@
         <h1>FinBank</h1>
     </div>
     <ul class="nav-links">
-        <li><a href="#" class="active"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+        <li><a href="admin_dashboard" class="active"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
         <li><a href="#"><i class="fas fa-users"></i><span>Customers</span></a></li>
         <li><a href="#"><i class="fas fa-exchange-alt"></i><span>Transactions</span></a></li>
         <li><a href="#"><i class="fas fa-bell"></i><span>Notifications</span></a></li>
@@ -76,6 +72,7 @@
                     </tr>
                     </thead>
                     <tbody>
+                    <% if (customers != null) { %>
                     <% for (Customer customer : customers) { %>
                     <tr>
                         <td><%= customer.getUsername() %></td>
@@ -86,6 +83,7 @@
                             <a href="DeleteCustomerServlet?id=<%= customer.getId() %>" class="btn btn-sm btn-danger">Delete</a>
                         </td>
                     </tr>
+                    <% } %>
                     <% } %>
                     </tbody>
                 </table>
