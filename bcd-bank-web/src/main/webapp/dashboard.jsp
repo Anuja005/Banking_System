@@ -533,23 +533,21 @@
 
         <!-- Dashboard Cards -->
         <div class="cards-grid">
-            <!-- View All Customers Card -->
+            <!-- Customer Portal Card -->
             <div class="card customer-portal">
-                <a href="all_customers" class="portal-btn">
-                    <div class="card-header">
-                        <div class="card-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div>
-                            <p class="card-title">ALL CUSTOMERS</p>
-                        </div>
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-user-circle"></i>
                     </div>
-                    <div class="card-value">View All Customers</div>
-                    <div class="card-footer">
-                        <i class="fas fa-arrow-right"></i>
-                        <span>Click to see all registered customers</span>
+                    <div>
+                        <p class="card-title">CUSTOMER PORTAL</p>
                     </div>
-                </a>
+                </div>
+                <div class="card-value">Manage Your Profile</div>
+                <div class="card-footer">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>Access all your personal details</span>
+                </div>
             </div>
 
             <!-- Total Balance Card -->

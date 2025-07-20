@@ -449,60 +449,23 @@
         <div class="dashboard-content">
             <h1 class="dashboard-title">Admin Dashboard</h1>
 
-            <!-- Customer Portal Container -->
+            <!-- View All Customers Card -->
             <div class="card customer-portal">
-                <div class="card-header">
-                    <div class="card-icon"><i class="fas fa-users"></i></div>
-                    <div><p class="card-title">CUSTOMER MANAGEMENT</p></div>
-                </div>
-                <div class="card-body">
-                    <a href="add_customer.jsp" class="btn btn-primary">
-                        <i class="fas fa-user-plus"></i>
-                        Add Customer
-                    </a>
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Username</th>
-                            <th>Full Name</th>
-                            <th>Email</th>
-                            <th>Actions</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <!-- Sample data for demonstration -->
-                        <tr>
-                            <td>001</td>
-                            <td>john_doe</td>
-                            <td>John Doe</td>
-                            <td>john@example.com</td>
-                            <td>
-                                <button class="btn" style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.5rem 1rem; font-size: 0.8rem;">
-                                    <i class="fas fa-edit"></i>
-                                </button>
-                                <button class="btn" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 0.5rem 1rem; font-size: 0.8rem; margin-left: 0.5rem;">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>002</td>
-                            <td>jane_smith</td>
-                            <td>Jane Smith</td>
-                            <td>jane@example.com</td>
-                            <td>
-                                <button class="btn" style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.5rem 1rem; font-size: 0.8rem;">
-                                    <i class="fas fa-edit"></i>
-                                </button>
-                                <button class="btn" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 0.5rem 1rem; font-size: 0.8rem; margin-left: 0.5rem;">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <a href="all_customers" class="portal-btn">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <p class="card-title">ALL CUSTOMERS</p>
+                        </div>
+                    </div>
+                    <div class="card-value">View All Customers</div>
+                    <div class="card-footer">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>Click to see all registered customers</span>
+                    </div>
+                </a>
             </div>
 
             <!-- Transactions Container -->
