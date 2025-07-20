@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create Your Account | Crown Capital Bank</title>
+    <title>Create Your Account | Capital Bank</title>
     <style>
         body {
             margin: 0;
