@@ -423,7 +423,7 @@
         </div>
         <ul class="nav-links">
             <li><a href="#" class="active" onclick="showSection('dashboard')"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
-            <li><a href="all_customers.jsp"><i class="fas fa-users"></i><span>Customers</span></a></li>
+            <li><a href="all-customers"><i class="fas fa-users"></i><span>Customers</span></a></li>
             <li><a href="#" onclick="showSection('transactions')"><i class="fas fa-exchange-alt"></i><span>Transactions</span></a></li>
             <li><a href="#" onclick="showSection('notifications')"><i class="fas fa-bell"></i><span>Notifications</span></a></li>
             <li><a href="#" onclick="showSection('settings')"><i class="fas fa-cog"></i><span>Settings</span></a></li>

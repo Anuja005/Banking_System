@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/all_customers.jsp")
+@WebServlet("/all-customers")
 public class AllCustomersServlet extends HttpServlet {
 
     @EJB
@@ -20,7 +20,8 @@ public class AllCustomersServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("adminService", adminService);
+        List<Customer> customers = adminService.getAllCustomers();
+        req.setAttribute("customers", customers);
         req.getRequestDispatcher("all_customers.jsp").forward(req, resp);
     }
 }
