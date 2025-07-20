@@ -423,7 +423,7 @@
         </div>
         <ul class="nav-links">
             <li><a href="#" class="active" onclick="showSection('dashboard')"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
-            <li><a href="#" onclick="showSection('customers')"><i class="fas fa-users"></i><span>Customers</span></a></li>
+            <li><a href="all_customers.jsp"><i class="fas fa-users"></i><span>Customers</span></a></li>
             <li><a href="#" onclick="showSection('transactions')"><i class="fas fa-exchange-alt"></i><span>Transactions</span></a></li>
             <li><a href="#" onclick="showSection('notifications')"><i class="fas fa-bell"></i><span>Notifications</span></a></li>
             <li><a href="#" onclick="showSection('settings')"><i class="fas fa-cog"></i><span>Settings</span></a></li>
@@ -448,25 +448,6 @@
         <!-- Dashboard Content -->
         <div class="dashboard-content">
             <h1 class="dashboard-title">Admin Dashboard</h1>
-
-            <!-- View All Customers Card -->
-            <div class="card customer-portal">
-                <a href="all_customers" class="portal-btn">
-                    <div class="card-header">
-                        <div class="card-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div>
-                            <p class="card-title">ALL CUSTOMERS</p>
-                        </div>
-                    </div>
-                    <div class="card-value">View All Customers</div>
-                    <div class="card-footer">
-                        <i class="fas fa-arrow-right"></i>
-                        <span>Click to see all registered customers</span>
-                    </div>
-                </a>
-            </div>
 
             <!-- Transactions Container -->
             <div class="card">
