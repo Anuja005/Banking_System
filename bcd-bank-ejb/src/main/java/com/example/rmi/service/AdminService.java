@@ -34,4 +34,10 @@ public class AdminService {
     public Customer getCustomerById(int customerId) {
         return em.find(Customer.class, customerId);
     }
+
+    public List<Customer> getLatestCustomers(int maxResults) {
+        return em.createQuery("SELECT c FROM Customer c ORDER BY c.createdAt DESC", Customer.class)
+                .setMaxResults(maxResults)
+                .getResultList();
+    }
 }
